@@ -30,6 +30,6 @@ parameters = [
     "-hugepages",
 ]
 executable = "arma3" # Default: "arma3_x64"
-file_patching = false # Default: true
+file_patching = true # Default: true
 binarize = true # Default: false
 rapify = false # Default: true
