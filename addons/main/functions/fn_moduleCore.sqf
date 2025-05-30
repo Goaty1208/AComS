@@ -4,10 +4,10 @@ params [
 	["_activated", true, [true]]		// True when the module was activated, false when it is deactivated (i.e., synced triggers are no longer active)
 ];
 
+// Module specific behavior. Function can extract arguments from logic and use them.
+if (_activated && _logic getVariable ["Enabled", 1]) then {
 
-if (_activated) then {
-
-	hint "[AComS] Core: enabled!"; // will display the bomb yield, once the game is started
+	hint "[AComS] Core: enabled!";
 };
 // Module function is executed by spawn command, so returned value is not necessary, but it is good practice.
 true;
