@@ -4,8 +4,32 @@ prefix = "acoms"
 mainprefix = "z"
 
 [version]
-
-major = 0 # Overrides path when set
+major = 0
 minor = 0
 patch = 0
-build = 1 # Optional
+build = 1
+
+mainprefix = "z"
+
+# Launched with `hemtt launch`
+[hemtt.launch.default]
+
+presets = [
+    "AComS", # .html presets from .hemtt/presets/
+]
+
+mission = "test.VR" # Mission to launch directly into the editor with
+parameters = [
+    "-skipIntro",           # These parameters are passed to the Arma 3 executable
+    "-noSplash",            # They do not need to be added to your list
+    "-showScriptErrors",    # You can add additional parameters here
+    "-debug",
+    "-filePatching",
+    "-cpuCount=12",
+    "-enableHT",
+    "-hugepages",
+]
+executable = "arma3" # Default: "arma3_x64"
+file_patching = false # Default: true
+binarize = true # Default: false
+rapify = false # Default: true
