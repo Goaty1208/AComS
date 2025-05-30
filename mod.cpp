@@ -12,4 +12,4 @@ author = "Goaty1208";
 overviewPicture = "";
 overviewText = "overviewText";
 overviewFootnote = "<br /><br /><t color='#999999'>This content is under the APL-SA License.<br />Press <t /><t color='#19d3ff'>Left Shift + P<t /><t color='#999999'> to open the store page for more information.<t />";
-LogoSmall = "logoSmall_CA.paa"
+LogoSmall = "logoSmall_CA.paa";

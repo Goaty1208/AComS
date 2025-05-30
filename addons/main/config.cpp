@@ -40,24 +40,24 @@ class CfgVehicles {
 
 	class GOATY_AComS_Core : Module_F {
 		// Standard object definitions:
-		scope = 2;										// Editor visibility; 2 will show it in the menu, 1 will hide it.
-		displayName = "Core";				// Name displayed in the menu
-		icon = QPATHTOEF(main,data\acoms_BW_CA.paa);	// Map icon. Delete this entry to use the default icon.
+		scope = 2;												// Editor visibility; 2 will show it in the menu, 1 will hide it.
+		displayName = "Core";									// Name displayed in the menu
+		icon = QPATHTOEF(main,data\acoms_BW_CA.paa);			// Map icon. Delete this entry to use the default icon.
 		category = "GOATY_AComS_Category";
 
-		function = "";	// Name of function triggered once conditions are met
-		functionPriority = 1;				// Execution priority, modules with lower number are executed first. 0 is used when the attribute is undefined
-		isGlobal = 1;						// 0 for server only execution, 1 for global execution, 2 for persistent global execution
-		isTriggerActivated = 0;				// 1 for module waiting until all synced triggers are activated
-		isDisposable = 1;					// 1 if modules is to be disabled once it is activated (i.e. repeated trigger activation will not work)
-		is3DEN = 1;							// 1 to run init function in Eden Editor as well
-		curatorCanAttach = 0;				// 1 to allow Zeus to attach the module to an entity
-		curatorInfoType = ""; // Menu displayed when the module is placed or double-clicked on by Zeus
+		function = "fn_moduleCore.sqf";	    					// Name of function triggered once conditions are met
+		functionPriority = 1;									// Execution priority, modules with lower number are executed first. 0 is used when the attribute is undefined
+		isGlobal = 1;											// 0 for server only execution, 1 for global execution, 2 for persistent global execution
+		isTriggerActivated = 0;									// 1 for module waiting until all synced triggers are activated
+		isDisposable = 1;										// 1 if modules is to be disabled once it is activated (i.e. repeated trigger activation will not work)
+		is3DEN = 1;												// 1 to run init function in Eden Editor as well
+		curatorCanAttach = 0;									// 1 to allow Zeus to attach the module to an entity
+		curatorInfoType = ""; 									// Menu displayed when the module is placed or double-clicked on by Zeus
 
 		// 3DEN Attributes Menu Options
-		canSetArea = 0;						// Allows for setting the area values in the Attributes menu in 3DEN
-		canSetAreaShape = 0;				// Allows for setting "Rectangle" or "Ellipse" in Attributes menu in 3DEN
-		canSetAreaHeight = 0;				// Allows for setting height or Z value in Attributes menu in 3DEN
+		canSetArea = 0;											// Allows for setting the area values in the Attributes menu in 3DEN
+		canSetAreaShape = 0;									// Allows for setting "Rectangle" or "Ellipse" in Attributes menu in 3DEN
+		canSetAreaHeight = 0;									// Allows for setting height or Z value in Attributes menu in 3DEN
 		class AttributeValues {
 			// This section allows you to set the default values for the attributes menu in 3DEN
 			size3[] = { 0, 0, -1 };		// 3D size (x-axis radius, y-axis radius, z-axis radius)
@@ -72,11 +72,11 @@ class CfgVehicles {
 			};
 
 			// Module-specific arguments:
-			class TestProp : Combo {
+			class Enabled : Combo {
 				property = "GOATY_AComS_Core_TestProp";			// Unique property (use "<tag>_<moduleClass>_<attributeClass>" format to ensure that the name is unique)
-				displayName = "Test Property";					// Argument label
-				tooltip = "Test property";						// Tooltip description
-				typeName = "BOOL";							// Value type, can be "NUMBER", "STRING" or "BOOL"
+				displayName = "Enabled";						// Argument label
+				tooltip = "Enables or disables AComS core";		// Tooltip description
+				typeName = "BOOL";								// Value type, can be "NUMBER", "STRING" or "BOOL"
 				defaultValue = "true";							// Default attribute value. Warning: this is an expression, and its returned value will be used (50 in this case).
 
 				// Listbox items
@@ -85,14 +85,6 @@ class CfgVehicles {
 					class pTrue	 { name = "True";	value = 1; };
 					class pFalse { name = "False"; value = 0; };
 				};
-			};
-
-			class Name : Edit {
-				displayName = "Text Test";
-				tooltip = "Text Test";
-				property = "GOATY_AComS_Core_Name";
-				// Default text for the input box:
-				defaultValue = """---Test Value---"""; // Because this is an expression, one must have a string within a string to return a string
 			};
 
 			class ModuleDescription : ModuleDescription {}; // Module description should be shown last

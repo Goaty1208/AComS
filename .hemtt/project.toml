@@ -3,14 +3,6 @@ author = "Goaty1208"
 prefix = "acoms"
 mainprefix = "z"
 
-[version]
-major = 0
-minor = 0
-patch = 0
-build = 2
-
-mainprefix = "z"
-
 # Launched with `hemtt launch`
 [hemtt.launch.default]
 
@@ -30,6 +22,5 @@ parameters = [
     "-hugepages",
 ]
 executable = "arma3" # Default: "arma3_x64"
-file_patching = true # Default: true
 binarize = true # Default: false
 rapify = false # Default: true
