@@ -42,7 +42,7 @@ class CfgVehicles {
 		// Standard object definitions:
 		scope = 2;												// Editor visibility; 2 will show it in the menu, 1 will hide it.
 		displayName = "Core";									// Name displayed in the menu
-		icon = QPATHTOEF(main,data\acoms_BW_CA.paa);			// Map icon. Delete this entry to use the default icon.
+		icon = QPATHTOEF(main,data\acoms_BW_CA.paa);			// TODO: Change macro
 		category = "GOATY_AComS_Category";
 
 		function = "GOATY_fnc_moduleCore";	    				// Name of function triggered once conditions are met
@@ -110,7 +110,7 @@ class CfgVehicles {
 			class BluforUnit {
 				description = "Short description";
 				displayName = "Any BLUFOR unit";	  // Custom name
-				icon = QPATHTOEF(main,data\acoms_BW_CA.paa);  // Custom icon (can be file path or CfgVehicleIcons entry)
+				icon = QPATHTOEF(main,data\acoms_BW_CA.paa);  // Custom icon (can be file path or CfgVehicleIcons entry) TODO: Change macro
 				side = 1;							  // Custom side (determines icon color)
 			};
 		};
@@ -120,7 +120,7 @@ class CfgVehicles {
 class CfgFunctions {
 	class GOATY {
 		class GOATY_AComS_Category {
-			file = "\GOATY_AComS\functions";
+			file = "\GOATY_AComS\functions"; //TODO: use path macro
 			class moduleCore {};
 		};
 	};
