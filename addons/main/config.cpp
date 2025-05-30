@@ -80,8 +80,8 @@ class CfgVehicles {
 				// Listbox items
 				class Values
 				{
-					class pTrue	 { name = "True";	value = true; };
-					class pFalse { name = "False"; value = false; };
+					class pTrue	 { name = "True";	value = 1; };
+					class pFalse { name = "False"; value = 0; };
 				};
 			};
 
