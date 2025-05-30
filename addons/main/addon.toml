@@ -19,10 +19,12 @@ include = [
     "config.cpp",
     "LICENSE",
     "logo_ca.paa",
+    "logoSmall_CA.paa",
     "logo_co.paa",
 ]
 
 exclude = [
     ".vscode/**/*", # Exclude all files in the .vscode folder
     "data/*.psd",
+    "media/*",
 ]
