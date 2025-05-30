@@ -62,7 +62,25 @@ class CfgVehicles {
 			// This section allows you to set the default values for the attributes menu in 3DEN
 			size3[] = { 0, 0, -1 };		// 3D size (x-axis radius, y-axis radius, z-axis radius)
 			isRectangle = 0;				// Sets if the default shape should be a rectangle or ellipse
-		};	class Values
+		};
+
+		// Module attributes (uses https://community.bistudio.com/wiki/Eden_Editor:_Configuring_Attributes#Entity_Specific):
+		class Attributes : AttributesBase {
+			// Arguments shared by specific module type (have to be mentioned in order to be present):
+			class Units : Units {
+				property = "GOATY_AComS_Core_Units";
+			};
+
+			// Module-specific arguments:
+			class TestProp : Combo {
+				property = "GOATY_AComS_Core_TestProp";			// Unique property (use "<tag>_<moduleClass>_<attributeClass>" format to ensure that the name is unique)
+				displayName = "Test Property";					// Argument label
+				tooltip = "Test property";						// Tooltip description
+				typeName = "BOOL";							// Value type, can be "NUMBER", "STRING" or "BOOL"
+				defaultValue = "true";							// Default attribute value. Warning: this is an expression, and its returned value will be used (50 in this case).
+
+				// Listbox items
+				class Values
 				{
 					class pTrue	 { name = "True";	value = 1; };
 					class pFalse { name = "False"; value = 0; };
