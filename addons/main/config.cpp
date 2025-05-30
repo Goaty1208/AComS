@@ -1,10 +1,10 @@
-#include "\x\cba\addons\main\script_macros_common.hpp"
+#include "script_component.hpp"
 
 class CfgPatches {
     class GOATY_AComS {
         units[] = {"GOATY_AComS_Core"};
         weapons[] = {};
-        requiredAddons[] = {"A3_Modules_F"};
+        requiredAddons[] = {"A3_Modules_F", "cba_main"};
         version = "0.0.2";
         author[] = {"Goaty1208"};
         authorUrl = "https://github.com/Goaty1208";
@@ -42,7 +42,7 @@ class CfgVehicles {
 		// Standard object definitions:
 		scope = 2;										// Editor visibility; 2 will show it in the menu, 1 will hide it.
 		displayName = "Core";				// Name displayed in the menu
-		icon = QUOTE(PATHTOF(data\acoms_BW_CA.paa));	// Map icon. Delete this entry to use the default icon.
+		icon = QPATHTOEF(main,data\acoms_BW_CA.paa);	// Map icon. Delete this entry to use the default icon.
 		category = "GOATY_AComS_Category";
 
 		function = "";	// Name of function triggered once conditions are met
@@ -118,7 +118,7 @@ class CfgVehicles {
 			class BluforUnit {
 				description = "Short description";
 				displayName = "Any BLUFOR unit";	  // Custom name
-				icon = QUOTE(PATHTOF(data\acoms_BW_CA.paa));  // Custom icon (can be file path or CfgVehicleIcons entry)
+				icon = QPATHTOEF(main,data\acoms_BW_CA.paa);  // Custom icon (can be file path or CfgVehicleIcons entry)
 				side = 1;							  // Custom side (determines icon color)
 			};
 		};
