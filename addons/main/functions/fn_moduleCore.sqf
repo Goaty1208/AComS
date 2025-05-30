@@ -7,7 +7,13 @@ params [
 // Module specific behavior. Function can extract arguments from logic and use them.
 if (_activated && _logic getVariable ["Enabled", 1]) then {
 
-	hint "[AComS] Core: enabled!";
+	if (_logic getVariable ["Debug", 1]) then {
+		systemChat "[AComS] Core: enabled!";
+	};
+
+	diag_log "[AComS] Core: enabled!";
+
 };
+
 // Module function is executed by spawn command, so returned value is not necessary, but it is good practice.
 true;

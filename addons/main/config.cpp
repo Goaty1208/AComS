@@ -73,11 +73,26 @@ class CfgVehicles {
 
 			// Module-specific arguments:
 			class Enabled : Combo {
-				property = "GOATY_AComS_Core_TestProp";			// Unique property (use "<tag>_<moduleClass>_<attributeClass>" format to ensure that the name is unique)
+				property = "GOATY_AComS_Core_Enabled";			// Unique property (use "<tag>_<moduleClass>_<attributeClass>" format to ensure that the name is unique)
 				displayName = "Enabled";						// Argument label
 				tooltip = "Enables or disables AComS core";		// Tooltip description
 				typeName = "BOOL";								// Value type, can be "NUMBER", "STRING" or "BOOL"
 				defaultValue = "true";							// Default attribute value. Warning: this is an expression, and its returned value will be used (50 in this case).
+
+				// Listbox items
+				class Values
+				{
+					class pTrue	 { name = "True";	value = 1; };
+					class pFalse { name = "False"; value = 0; };
+				};
+			};
+
+			class Debug : Combo {
+				property = "GOATY_AComS_Core_Debug";			
+				displayName = "Debug";						
+				tooltip = "Enables or disables debug settings";		
+				typeName = "BOOL";								
+				defaultValue = "true";
 
 				// Listbox items
 				class Values
@@ -92,7 +107,7 @@ class CfgVehicles {
 
 		// Module description (must inherit from base class, otherwise pre-defined entities won't be available)
 		class ModuleDescription : ModuleDescription {
-			description = "Short module description";	// Short description, will be formatted as structured text
+			description = "AComS core module, sets up basic functions.";	// Short description, will be formatted as structured text
 			sync[] = { "LocationArea_F" };				// Array of synced entities (can contain base classes)
 
 			class LocationArea_F {
