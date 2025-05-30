@@ -40,7 +40,7 @@ class CfgVehicles {
 		// Standard object definitions:
 		scope = 2;										// Editor visibility; 2 will show it in the menu, 1 will hide it.
 		displayName = "Core";				// Name displayed in the menu
-		icon = "data\acoms_BW_CA.paa";	// Map icon. Delete this entry to use the default icon.
+		icon = "\z\acoms\addons\main\data\acoms_BW_CA.paa";	// Map icon. Delete this entry to use the default icon.
 		category = "GOATY_AComS_Category";
 
 		function = "";	// Name of function triggered once conditions are met
@@ -116,7 +116,7 @@ class CfgVehicles {
 			class BluforUnit {
 				description = "Short description";
 				displayName = "Any BLUFOR unit";	  // Custom name
-				icon = "data\acoms_BW_CA.paa";  // Custom icon (can be file path or CfgVehicleIcons entry)
+				icon = "\z\acoms\addons\main\data\acoms_BW_CA.paa";  // Custom icon (can be file path or CfgVehicleIcons entry)
 				side = 1;							  // Custom side (determines icon color)
 			};
 		};
