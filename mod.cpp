@@ -1,4 +1,4 @@
-name = "AComS";
+name = "AComS - 0.0.2";
 picture = "";
 actionName = "Website";
 action = "https://github.com/Goaty1208";
